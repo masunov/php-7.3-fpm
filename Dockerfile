@@ -10,8 +10,7 @@ RUN apt-get update && apt-get install -qy \
     libcurl4-openssl-dev \
     libssl-dev libmcrypt-dev \
     libfreetype6-dev \
-    libjpeg62-turbo-dev l\
-    ibpq-dev \
+    libjpeg62-turbo-dev libpq-dev \
     libpng-dev \
     && docker-php-ext-install -j$(nproc) iconv \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
