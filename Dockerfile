@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -qy \
     libssl-dev libmcrypt-dev \
     libfreetype6-dev \
     libjpeg62-turbo-dev libpq-dev \
+    postgresql-client \
     libpng-dev \
     && docker-php-ext-install -j$(nproc) iconv \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
