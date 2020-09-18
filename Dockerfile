@@ -25,8 +25,9 @@ RUN apt-get update && apt-get install -qy \
     && wget https://getcomposer.org/installer \
     && php installer --install-dir=/usr/local/bin --filename=composer \
     && pecl install -o -f redis \
-    &&  rm -rf /tmp/pear \
-    &&  docker-php-ext-enable redis
+    && rm -rf /tmp/pear \
+    && docker-php-ext-enable redis \
+    && composer global require hirak/prestissimo
 EXPOSE 9000
 
 CMD ["php-fpm"]
