@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install -qy \
     wget \
     zip \
     zlib1g-dev \
+    libicu-dev \
     libzip-dev \
     libcurl4-openssl-dev \
     libssl-dev libmcrypt-dev \
