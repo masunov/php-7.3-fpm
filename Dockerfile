@@ -22,6 +22,8 @@ RUN apt-get update && apt-get install -qy \
     && docker-php-ext-install bcmath \
     && docker-php-ext-install pcntl \
     && docker-php-ext-install opcache \
+    && docker-php-ext-configure intl \
+    && docker-php-ext-install intl \
     && wget https://getcomposer.org/installer \
     && php installer --install-dir=/usr/local/bin --filename=composer \
     && pecl install -o -f redis \
